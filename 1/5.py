@@ -10,5 +10,7 @@
 sit_vagon = int(input("В какой вагон сел Витя?: "))
 real_vagon = int(input("В каком вагоне Витя оказался?: "))
 
-
-print("Всего вагонов в электричке:", real_vagon + (sit_vagon - 1))
+if sit_vagon == real_vagon:
+    print("Нельзя узнать")
+else: 
+    print("Всего вагонов в электричке:", real_vagon + (sit_vagon - 1))
