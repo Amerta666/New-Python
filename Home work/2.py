@@ -8,7 +8,7 @@ sum = 0
 for i in number:
     sum = int(i) + sum
     
-print(sum)
+print("Сумма цифр числа", number, " = ", sum)
 
 
 
