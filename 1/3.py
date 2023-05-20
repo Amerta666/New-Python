@@ -7,10 +7,7 @@ class_b = int(input("Введите кол-во учащихся в Б клас�
 class_c = int(input("Введите кол-во учащихся в В классе: "))
 
 summ_class_a = int(class_a / 2) + int(class_a % 2)
-print(summ_class_a)
 summ_class_b = int(class_b / 2) + int(class_b % 2)
-print(summ_class_b)
 summ_class_c = int(class_c / 2) + int(class_c % 2)
-print(summ_class_c)
 
 print("Нам нужно приобрести",summ_class_a + summ_class_b + summ_class_c, "парт(ы\у)" )
