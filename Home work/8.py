@@ -3,3 +3,14 @@
 # прямоугольника).
 
 #   3 2 4 -> yes            3 2 1 -> no
+
+razmer1 = int(input("Длина шоколадки: "))
+razmer2 = int(input("Ширина шоколадки: "))
+number_dol = int(input("На сколько долек делить?: "))
+
+if razmer1 * razmer2 < number_dol:
+    print("Столько нет шоколада")
+elif number_dol % razmer1 == 0 or number_dol % razmer2 == 0:
+    print("Разломить можно")
+
+else: print("Так не получится")
