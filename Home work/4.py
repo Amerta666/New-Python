@@ -3,3 +3,21 @@
 # два раза больше журавликов, чем Петя и Сережа вместе?
 
 #     6 -> 1 4 1       24 -> 4 16 4       60 -> 10 40 10
+
+num_sum = int(input("Введите кол-во журавликов: "))
+num_kate = int(num_sum / 1.5)
+num_pete = int((num_sum - num_kate) / 2)
+num_serg = num_pete
+
+num_kate = (num_pete + num_serg) * 2
+
+
+print("Катя сделала",num_kate, "журавликa(ов)")
+print("Петя сделал",num_pete, "журавликa(ов)")
+print("Сережа сделал",num_serg, "журавликa(ов)")
+
+if num_kate + num_pete + num_serg < num_sum:
+    print("Ребятам кто-то помогал :))")
+
+if num_kate + num_pete + num_serg > num_sum:
+    print("Ребята хорошо постарались")

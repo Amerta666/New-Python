@@ -5,3 +5,19 @@
 
 #     385916 -> yes         123456 -> no
 
+
+num = input("Введите номер билета: ")
+
+sum1 = 0
+sum2 = 0
+count = 0
+for i in num:
+    if count < 3:
+        sum1 = sum1 + int(i)
+        count += 1
+    else:
+        sum2 = sum2 + int(i)
+
+if sum1 == sum2:
+    print("Билет счастливый")
+else: print("Билет не счастливый")
