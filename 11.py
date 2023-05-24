@@ -24,7 +24,6 @@ while sum != a and count < 20:
 	sum2 = sum
 	sum = sum2 + sum1
 	count +=1
-	0
 if sum == a:
 	print("Число", a, "является", count, "по счёту Фибоначчи")
-else: print("-1")
+else: print("Число", a, "не является числом Фибоначчи и равно -1")
