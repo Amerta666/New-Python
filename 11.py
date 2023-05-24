@@ -5,25 +5,25 @@
 
 
 count = 3
-sum = 1
-sum1 = 1
-sum2 = 1
+fib_prev = 1
+fib_curr = 1
+fib_next = 1
 b = True
 
 while b:
 	try:
-		a = int(input("Введите A: "))
-		if a > 1:
+		A = int(input("Введите A: "))
+		if A > 1:
 			b = False
 		else: print("Число А должно быть больше 1!")
 	except:
 		print("Введите число!")
 
-while sum != a and count < 20:
-	sum1 = sum2
-	sum2 = sum
-	sum = sum2 + sum1
+while fib_next < A:
+	fib_prev = fib_curr
+	fib_curr = fib_next
+	fib_next = fib_curr + fib_prev
 	count +=1
-if sum == a:
-	print("Число", a, "является", count, "по счёту Фибоначчи")
-else: print("Число", a, "не является числом Фибоначчи и равно -1")
+if fib_next == A:
+	print("Число", A, "является", count, "по счёту Фибоначчи")
+else: print("Число", A, "не является числом Фибоначчи и равно -1")
