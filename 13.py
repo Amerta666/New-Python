@@ -15,8 +15,18 @@ import random
 rand_list=[]
 count = 0
 sum = 0
+a = True
 
-n = int(input("Введите общее кол-во дней: "))
+while a:
+    try:
+        n = int(input("Введите общее кол-во дней: "))
+        if n > 0:
+            a = False
+        else: print("Введите положительное число!")
+    except:
+        print("Введите число!")
+
+
 for i in range(n):
     rand_list.append(random.randint(-50,51))
 print(rand_list)
