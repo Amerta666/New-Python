@@ -10,3 +10,23 @@
 # Input: 6 -> -20 30 -40 50 10 -10
 # Output: 2
 
+import random
+
+rand_list=[]
+count = 0
+sum = 0
+
+n = int(input("Введите общее кол-во дней: "))
+for i in range(n):
+    rand_list.append(random.randint(-50,51))
+print(rand_list)
+
+for i in rand_list:
+    if i > 0:
+        count += 1
+        if count > sum:
+            sum = count
+    else:   
+        count = 0  
+print(sum, "дня(ей) длилась самая длинная оттепель")
+
