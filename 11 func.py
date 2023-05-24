@@ -1,14 +1,5 @@
 b = True
 
-while b:
-	try:
-		A = int(input("Введите A: "))
-		if A > 1:
-			b = False
-		else: print("Число А должно быть больше 1!")
-	except:
-		print("Введите число!")
-
 def check_fib_pos(A):
     count = 3
     fib_prev = 1
@@ -24,5 +15,14 @@ def check_fib_pos(A):
         print("Число", A, "является", count, "-ым числом Фибоначчи")
     else: print("Число", A, "не является числом Фибоначчи и равно -1")
     return count
+
+while b:
+	try:
+		A = int(input("Введите A: "))
+		if A > 1:
+			b = False
+		else: print("Число А должно быть больше 1!")
+	except:
+		print("Введите число!")
 
 print(check_fib_pos(A))
