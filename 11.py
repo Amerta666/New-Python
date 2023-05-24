@@ -3,15 +3,21 @@
 
 # 5 -> 6
 
-a = int(input("Введите A: "))
+
 count = 3
 sum = 1
 sum1 = 1
 sum2 = 1
+b = True
 
-if a == 0 or a == 1 or a < 0:
-	print("Число А должно быть больше 1!")
-	exit()
+while b:
+	try:
+		a = int(input("Введите A: "))
+		if a > 1:
+			b = False
+		else: print("Число А должно быть больше 1!")
+	except:
+		print("Введите число!")
 
 while sum != a and count < 20:
 	sum1 = sum2
