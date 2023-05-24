@@ -12,9 +12,9 @@
 
 import random
 
-rand_list=[]
+rand_list = []
 count = 0
-sum = 0
+summ = 0
 a = True
 
 while a:
@@ -22,21 +22,20 @@ while a:
         n = int(input("Введите общее кол-во дней: "))
         if n > 0:
             a = False
-        else: print("Введите положительное число!")
+        else:
+            print("Введите положительное число!")
     except:
         print("Введите число!")
 
-
 for i in range(n):
-    rand_list.append(random.randint(-50,51))
+    rand_list.append(random.randint(-50, 51))
 print(rand_list)
 
 for i in rand_list:
     if i > 0:
         count += 1
-        if count > sum:
-            sum = count
-    else:   
-        count = 0  
-print(sum, "дня(ей) длилась самая длинная оттепель")
-
+        if count > summ:
+            summ = count
+    else:
+        count = 0
+print(summ, "дня(ей) длилась самая длинная оттепель")
