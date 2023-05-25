@@ -20,15 +20,15 @@ a = True
 while a:
     try:
         n = int(input("Введите общее кол-во дней: \n"))
-        if n > 0:
+        if 101 > n > 0:
             a = False
         else:
-            print("Введите положительное число!")
+            print("Введите положительное число от 1 до 100!")
     except:
         print("Введите число!")
 
 for i in range(n):
-    rand_list.append(random.randint(-50, 51))
+    rand_list.append(random.randint(-50, 50))
 print(rand_list)
 
 for i in rand_list:
