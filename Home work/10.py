@@ -12,7 +12,7 @@ a = True
 
 while a:
     try:
-        n = int(input("Введите кол-во монет: "))
+        n = int(input("Введите кол-во монеток: "))
         if n > 1:
             a = False
         else:
