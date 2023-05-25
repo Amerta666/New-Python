@@ -19,7 +19,7 @@ a = True
 
 while a:
     try:
-        n = int(input("Введите общее кол-во дней: "))
+        n = int(input("Введите общее кол-во дней: \n"))
         if n > 0:
             a = False
         else:

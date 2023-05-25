@@ -6,3 +6,33 @@
 
 # Input: 5 -> 5 1 6 5 9
 # Output: 1 9
+
+import random
+
+rand_list = []
+a = True
+
+while a:
+    try:
+        n = int(input("Введите кол-во арбузов: "))
+        if n > 0:
+            a = False
+        else:
+            print("Введите положительное число!")
+    except:
+        print("Введите число!")
+
+for i in range(n):
+    rand_list.append(random.randint(1, 9))
+print(rand_list)
+
+min_weight = rand_list[0]
+max_weight = rand_list[0]
+
+for i in rand_list:
+    if i > max_weight:
+        max_weight = i
+    if i < min_weight:
+        min_weight = i
+
+print("Арбуз для тёщи весом -", min_weight, ", арбуз для себя весом -", max_weight)
