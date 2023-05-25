@@ -15,10 +15,10 @@ a = True
 while a:
     try:
         n = int(input("Введите кол-во арбузов: "))
-        if n > 0:
+        if n > 1:
             a = False
         else:
-            print("Введите положительное число!")
+            print("Введите положительное число больше 1!")
     except:
         print("Введите число!")
 
@@ -35,4 +35,4 @@ for i in rand_list:
     if i < min_weight:
         min_weight = i
 
-print("Арбуз для тёщи весом -", min_weight, ", арбуз для себя весом -", max_weight)
+print("Арбуз для тёщи -", min_weight, ", арбуз для себя -", max_weight)
