@@ -19,8 +19,8 @@ while a:
     except:
         print("Введите число!")
 
-for x in range(s):
-    for y in range(p):
+for x in range(s+1):
+    for y in range(p+1):
         if s == x + y and p == x * y:
             print("Петя загадал числа -", x, "и", y)
             exit()
