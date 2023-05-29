@@ -5,7 +5,18 @@
 #
 # Output: {'S005', 'S002', 'S007', 'S001', 'S009'}
 
-dict = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"},
-        {"VII": " S005 "}, {" V ": " S009 "}, {" VIII": " S007 "}]
+dictin = [{"V": "S001"},
+        {"V": "S002"},
+        {"VI": "S001"},
+        {"VI": "S005"},
+        {"VII": "S005"},
+        {"V": "S009"},
+        {"VIII": "S007"}]
 
-print(dict.values())
+list_2 = []
+
+for i in dictin:
+    list_2.append(list(i.values())[0])
+
+list_2 = set(list_2)
+print(list_2)
