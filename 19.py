@@ -27,11 +27,11 @@ for i in range(n):
     list_1.append(random.randint(-50, 50))
 print(list_1)
 
-for i in range(len(list_1)):
+for i in range(n):
     if i >= k:
         list_2.append(list_1[i])
 
-for i in range(len(list_1)):
+for i in range(n):
     if i < k:
         list_2.append(list_1[i])
 
