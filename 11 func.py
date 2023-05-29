@@ -17,7 +17,7 @@ def check_fib_pos(A):
     return count
 
 while b:
-	try:
+    try:
 		A = int(input("Введите A: "))
 		if A > 1:
 			b = False
