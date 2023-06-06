@@ -39,6 +39,6 @@ for i in range(len(list_1)):
         max_num = list_1[i] + list_1[i - 1] + list_1[i + 1]
     if max_num > result:
         result = max_num
-print(result)
+print(f"Максимальная урожайность с 3ёх кустов - {result}")
 
 
