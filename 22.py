@@ -3,8 +3,6 @@
 # Пользователь вводит 2 числа. n — кол-во элементов первого множества.
 # m — кол-во элементов второго множества. Затем пользователь вводит сами элементы множеств.
 
-import random
-
 a = True
 
 list_1 = []
@@ -25,18 +23,17 @@ while a:
         print("Введите число!")
 
 for i in range(n):
-    list_1.append(random.randint(0, 30))
-print(list_1)
+    list_1.append(int(input("Введите элементы певого множества: ")))
 
 for i in range(m):
-    list_2.append(random.randint(0, 30))
-print(list_2)
+    list_2.append(int(input("Введите элементы второго множества: ")))
 
-mn_1 = set(list_1)
-mn_2 = set(list_2)
-mn_3 = mn_1.union(mn_2)
+print("Первый список -", *list_1)
+print(f"Второй список -", *list_2)
 
-print(mn_3)
-
-
-
+plenty = set(list_1).intersection(set(list_2))
+plenty = sorted(plenty)
+if len(plenty) < 1:
+    print("В заданных множествах встречающихся элементов нет")
+    exit()
+print("Результат -", *plenty)
