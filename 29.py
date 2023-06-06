@@ -16,7 +16,7 @@
 #
 # Решение:
 # n = int(input())                  n = int(input())
-# max_number = 0                    max_number = -1
+# max_number = n                    max_number = n
 # while n != 0:                     while n > 0:
 #     n = int(input())                  n = int(input())
 #     if max_number < n:                if max_number < n:
