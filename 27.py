@@ -9,9 +9,9 @@
 #
 # Output: 13
 
-text = "She sells sea shells on the sea shore The shells that she sells are sea shells " \
-       "I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells " \
-       "are sea shore shells"
+text = '''She sells sea shells on the sea shore The shells that she sells are sea shells
+       I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells
+       are sea shore shells'''
 
 text_1 = text.replace(".", " ")
 text_2 = text_1.strip(".,!?\n").lower().split()
