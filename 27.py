@@ -13,7 +13,8 @@ text = "She sells sea shells on the sea shore The shells that she sells are sea 
        "I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells " \
        "are sea shore shells"
 
-text_2 = text.strip(".,!?\n").lower().split()
+text_1 = text.replace(".", " ")
+text_2 = text_1.strip(".,!?\n").lower().split()
 print(f"В данном отрывке {len(text_2)} слов из них {len(set(text_2))} различных.")
 
 
