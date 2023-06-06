@@ -3,3 +3,40 @@
 # Пользователь вводит 2 числа. n — кол-во элементов первого множества.
 # m — кол-во элементов второго множества. Затем пользователь вводит сами элементы множеств.
 
+import random
+
+a = True
+
+list_1 = []
+list_2 = []
+
+while a:
+    try:
+        n = int(input("Введите кол-во эл-ов первого множества: "))
+        if n > 0:
+            m = int(input("Введите кол-во эл-ов второго множества: "))
+            if m > 0:
+                a = False
+            else:
+                print("Введите положительное целое число")
+        else:
+            print("Введите положительное целое число")
+    except:
+        print("Введите число!")
+
+for i in range(n):
+    list_1.append(random.randint(0, 30))
+print(list_1)
+
+for i in range(m):
+    list_2.append(random.randint(0, 30))
+print(list_2)
+
+mn_1 = set(list_1)
+mn_2 = set(list_2)
+mn_3 = mn_1.union(mn_2)
+
+print(mn_3)
+
+
+
