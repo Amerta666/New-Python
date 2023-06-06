@@ -28,7 +28,7 @@ list_1 = []
 
 for i in range(size_arr):
     list_1.append(random.randint(-50, 50))
-print(list_1)
+print(*list_1)
 
 diff_curr = None
 diff_gen = list_1[0] - num

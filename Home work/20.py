@@ -50,7 +50,7 @@ while a:
         word = input("Введите слово: ").upper()
         for i in word:
             sum += int(dict[i])
-        print(f"Вы ввели слово '{word.capitalize()}', которое набрало '{sum}' очков")
+        print(f"Вы ввели слово '{word.capitalize()}', которое набрало '{sum}' очкa(ов)")
         sum = 0
     except:
         print("Введите только одно слово, без цифр и пробелов!")
