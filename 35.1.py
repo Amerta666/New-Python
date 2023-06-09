@@ -6,7 +6,7 @@
 
 n = int(input('Введите число которое вы хотите проверить(является ли оно простым): '))
 def simple(n, i = 2):
-    if i in range(2, n - 1):
+    if i < n:
         if n % i != 0:
             return simple(n, i + 1)
         return print(f'Число "{n}" не является простым')
