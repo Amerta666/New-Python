@@ -4,3 +4,13 @@
 # A = 3; B = 5 -> 243 (3⁵)
 # A = 2; B = 3 -> 8
 
+a = int(input('Введите число "A"(которое будем возводить в степень): '))
+b = int(input('Введите степень числа A: '))
+
+def multi_degree(a, b):
+    if b == 1:
+        return a
+    else:
+        return a * multi_degree(a, b - 1)
+
+print(f'"{a}" в степени "{b}" = "{multi_degree(a, b)}"')
