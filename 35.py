@@ -7,10 +7,9 @@
 
 n = int(input('Введите число которое вы хотите проверить(является ли оно простым): '))
 def simple(n):
-    for i in range(2, 1001):
-        if i != n and n % i != 0:
+    for i in range(2, n):
+        if n % i != 0:
             return print(f'Число "{n}" является простым')
-        else:
-            return print(f'Число "{n}" не является простым')
+        return print(f'Число "{n}" не является простым')
 
 simple(n)
