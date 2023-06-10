@@ -8,5 +8,20 @@
 # 1 2 3 4 5            1 5 1 5 1
 # Вывод:               Вывод:
 # 0                    2
+import random
+
+n = int(input('Введите кол-во эл-ов в массиве: '))
+list_1 = list(random.randint(0, 10) for i in range(n))
+print(f'Дан массив - {list_1}')
+
+count = 0
+
+for i in range(len(list_1)):
+    if i != 0 and i != len(list_1) - 1:
+        if list_1[i + 1] < list_1[i] > list_1[i - 1]:
+            count += 1
+
+print(f'В данном массиве кол-во элементов у которых два соседних эл-та больше - {count}')
+
 
 
