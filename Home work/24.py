@@ -35,10 +35,12 @@ for i in range(len(list_1)):
         max_num = int(list_1[0]) + int(list_1[1]) + int(list_1[len(list_1) - 1])
         if max_num > result:
             result = max_num
+            more_barries = i + 1
     else:
         max_num = list_1[i] + list_1[i - 1] + list_1[i + 1]
     if max_num > result:
         result = max_num
-print(f"Максимальная урожайность с 3ёх кустов - {result}")
+        more_barries = i + 1
+print(f"Максимальная урожайность с {more_barries} кустa - {result}")
 
 
