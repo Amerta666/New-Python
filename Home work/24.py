@@ -42,5 +42,3 @@ for i in range(len(list_1)):
         result = max_num
         more_barries = i + 1
 print(f"Максимальная урожайность с {more_barries} кустa - {result}")
-
-
