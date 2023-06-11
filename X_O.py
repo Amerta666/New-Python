@@ -1,12 +1,14 @@
+# X and O
 
 l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-i = 1
+count = 0
+
 def pr_xo(n):
     print(f'| {n[0]} | {n[1]} | {n[2]} |')
     print(f'| {n[3]} | {n[4]} | {n[5]} |')
     print(f'| {n[6]} | {n[7]} | {n[8]} |')
-pr_xo(l)
 
+pr_xo(l)
 def check(n):
     if n[0] == 'x' and n[1] == 'x' and n[2] == 'x':
         return 1
@@ -40,16 +42,22 @@ def check(n):
         return 1
     elif n[2] == 'o' and n[4] == 'o' and n[6] == 'o':
         return 0
-while i <= 9:
+
+
+while count <= 8:
     x = int(input('В какую клетку ходить будем? (x): '))
     l[x - 1] = 'x'
     pr_xo(l)
     if check(l) == 1:
-        exit(print('Победили крестики'))
+        exit(print('Победили крестики !'))
+    count += 1
+
+    if count >= 8:
+        exit(print('Ничья !'))
 
     o = int(input('В какую клетку ходить будем? (o): '))
     l[o - 1] = 'o'
     pr_xo(l)
     if check(l) == 0:
-        exit(print('Победили нолики'))
-    i += 1
+        exit(print('Победили нолики !'))
+    count += 1
