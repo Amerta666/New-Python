@@ -10,5 +10,6 @@ diff = int(input('Введите разность прогрессии: '))
 nums = int(input('Введите количество эл-ов прогрессии: '))
 
 
-list_1 = list((7 + i * diff) for i in range(nums))
+list_1 = list((first_num + i * diff) for i in range(nums))
 print(list_1)
+
