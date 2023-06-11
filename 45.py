@@ -8,3 +8,20 @@
 #
 # Ввод:   Вывод:
 # 300     220 284
+
+num_k = 300
+num1 = 1
+num2 = 1
+def sum_del(num):
+    sum = 0
+    for i in range(1, num):
+        if num % i == 0:
+            sum = sum + i
+    return sum
+
+for i in range(2, num_k):
+    for j in range(i + 1, num_k):
+        num1 = i
+        num2 = j
+        if sum_del(num1) == num2 and sum_del(num2) == num1:
+            print(f'{num1} и {num2}')
