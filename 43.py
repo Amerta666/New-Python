@@ -13,7 +13,7 @@ print(list_1)
 list_2 = []
 
 count = 0
-for i in range(len(list_1)-1):
+for i in range(len(list_1) - 1):
     j = i + 1
     while j < len(list_1):
         if list_1[i] == list_1[j]:
@@ -21,7 +21,3 @@ for i in range(len(list_1)-1):
         j += 1
 
 print(count)
-
-
-
-
