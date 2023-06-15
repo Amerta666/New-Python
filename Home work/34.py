@@ -9,3 +9,22 @@
 #
 # Ввод:                                        Вывод:
 # пара-ра-рам рам-пам-папам па-ра-па-дам       Парам пам-пам
+
+string = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
+
+
+def rytm(str):
+    count = 0
+    list1 = []
+    for i in range(len(str)):
+        if str[i] in 'аеёиоуыэюя':
+            count += 1
+        if str[i] == ' ' or i == len(str) - 1:
+            list1.append(count)
+            count = 0
+    if len(set(list1)) == 1:
+        return print('Парам пам-пам')
+    return print('Пам парам')
+
+
+rytm(string)
