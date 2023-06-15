@@ -10,3 +10,12 @@
 #     print(‘same’)
 # else:
 #     print(‘different’)
+
+def same_by(transformation, values):
+    if list(filter(transformation, values)) == []:
+        return True
+    return False
+
+list1 = [0, 2, 10, 6, 7]
+
+same_by(lambda x: x % 2, list1)
