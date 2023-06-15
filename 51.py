@@ -11,11 +11,18 @@
 # else:
 #     print(‘different’)
 
-def same_by(transformation, values):
-    if list(filter(transformation, values)) == []:
+def same_by(characteristic, objects):
+    list1 = list(filter(characteristic, objects))
+    print(list1)
+
+    if list1 == objects:
         return True
     return False
 
-list1 = [0, 2, 10, 6, 7]
 
-same_by(lambda x: x % 2, list1)
+def char(x):
+    return x % 2 == 0
+
+
+values = []
+print(same_by(char, values))
