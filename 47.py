@@ -17,6 +17,7 @@ def check_values(x, y):
     return print('Не равны')
 
 values = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
-transormed_values = list(map(lambda x: x, values))
+transformation = lambda x: x
+transormed_values = list(map(transformation, values))
 
 check_values(values, transormed_values)
