@@ -13,4 +13,15 @@
 #                                                         5 10 15 20 25 30
 #                                                         6 12 18 24 30 36
 
+line, column = (map(int, input("Введите строку и столбец через пробел: ").split()))
 
+
+def print_operation_table(operation, num_rows, num_columns):
+    list1 = [[operation(i, j) for i in range(1, num_rows + 1)] for j in range(1, num_columns + 1)]
+    for i in range(len(list1)):
+        for j in range(len(list1[i])):
+            print("{:4d}".format(list1[i][j]), end="")
+        print()
+
+
+print_operation_table(lambda x, y: x * y, line, column)
