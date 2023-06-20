@@ -59,13 +59,17 @@ def add_record():
     write_data(data_file, phone_book)
 
 def del_record():
-    del_num = int(input('Введите идентефикатор удаляемой записи: '))
-    phone_book = read_data()
-    for line in phone_book:
-        if line(0) == del_num:
-            phone_book.pop(line)
-        else: print('Контакт не найден')
-    write_data(data_file, phone_book)
+    del_num = input('Введите идентефикатор удаляемой записи: ')
+    phone_book = read_data(data_file)
+    confirm = input('Введите "Y" для подтверждения или "N" для отмены: ')
+    if confirm == 'Y':
+        for line in phone_book:
+            if line[0] == del_num:
+                phone_book.pop(phone_book.index(line))
+                write_data(data_file, phone_book)
+                print('Контакт удалён')
+                return
+    return print('Контакт не найден')
 
 
 clear = lambda: os.system('cls')
