@@ -127,35 +127,6 @@ def parse(number_name, line):
                 result += word
     return result
 
-def parse_all(number, phone_book):
-    surname = ''
-    first_name = ''
-    second_name = ''
-    tel_nember = ''
-    count = 0
-    for line in phone_book:
-        if line[0] == number:
-            for word in line:
-                print(word)
-                if word == ' ':
-                    count += 1
-                if word != ' ':
-                    if count == 1:
-                        surname += word
-                    if count == 2:
-                        first_name += word
-                    if count == 3:
-                        second_name += word
-                    if count == 4:
-                        tel_nember += word
-        return list1.append(number, surname, first_name, second_name, tel_nember)
-
-def test():
-    number = '5'
-    phone_book = read_data(data_file)
-
-    return print(list1)
-
 
 clear = lambda: os.system('cls')
 clear()
@@ -174,8 +145,6 @@ while True:
         del_record()
     elif enter_num == 5:
         edit_record()
-    elif enter_num == 6:
-        test()
     elif enter_num == 0:
         exit()
     else:
