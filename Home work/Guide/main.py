@@ -34,10 +34,9 @@ def search():
     phone_book = read_data(data_file)
     for line in phone_book:
         if find in line:
-            print(line)
             list1.append(line)
-        if list1 == []:
-            return print('Ничего не найдено')
+    if list1 == []:
+        return print("Ничего не найдено, попробуйте ешё раз")
     for line in list1:
         print(line)
     return
