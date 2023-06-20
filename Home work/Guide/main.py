@@ -116,7 +116,6 @@ def edit_record():
 
 
 def parse(number_name, line):
-    phone_book = read_data(data_file)
     count = 0
     result = ''
     for word in line:
